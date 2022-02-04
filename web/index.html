@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Digital-Card</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="digital-card">
+          <div class="avatar">
+            <span>
+              <img src="../images/build.svg" alt="Selo Rocketseat" />
+            </span>
+            <img
+              id="userAvatar"
+              class="image-user"
+              src="https://avatars.githubusercontent.com/u/57264174?v=4"
+              alt="Foto Pessoal"
+            />
+          </div>
+          <div class="info">
+            <h1 id="userName">Fabiano Souza</h1>
+            <a
+              id="userLink"
+              href="https://github.com/fabianocsouza"
+              target="_blank"
+            >
+              <img src="../images/github.svg" alt="github" title="Github" />
+              <span id="userLogin">Fabianocsouza</span>
+            </a>
+
+            <p id="userBio">
+              An instructor foused on helping pople start programming for web
+            </p>
+
+            <ul id="socialLinks">
+              <li class="youtube">
+                <a href="https://www.youtube.com" target="_blank">
+                  <img
+                    src="../images/YouTube.svg"
+                    alt="ícone YouTube"
+                    title="Youtube"
+                  />
+                </a>
+              </li>
+              <li class="instagram">
+                <a
+                  href="https://www.instagram.com/fabianoc.souzaa/"
+                  target="_blank"
+                >
+                  <img
+                    src="../images/Instagram.svg"
+                    alt="ícone Instagram"
+                    title="Instagram"
+                  />
+                </a>
+              </li>
+              <li class="facebook">
+                <a
+                  href="https://www.facebook.com/fabianocardozosouza"
+                  target="_blank"
+                >
+                  <img
+                    src="../images/Facebook.svg"
+                    alt=" ícone Facebook"
+                    title="Facebook"
+                  />
+                </a>
+              </li>
+              <li class="twitter">
+                <a href="#" target="_blank">
+                  <img
+                    src="../images/Twitter.svg"
+                    alt="ícone Twitter"
+                    title="Twitter"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./vanilla-tilt.js"></script>
+    <script src="../src/index.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector('.card'), {
+        max: 25,
+        speed: 400,
+        'max-glare': 1
+      })
+    </script>
+  </body>
+</html>

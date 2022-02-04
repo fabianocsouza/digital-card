@@ -1,0 +1,152 @@
+@property --rotate {
+  syntax: '<angle>';
+  initial-value: 132deg;
+  inherits: false;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gray-200: #e1e1e6;
+  --gray-400: #c4c4cc;
+  --gray-700: #323238;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-fot-smoothing: antialiased;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: url(../../images/Desktop.svg) no-repeat center/cover, #0f0f10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.digital-card {
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.digital-card {
+  width: 22.375rem;
+  height: 33.75rem;
+  background: url(../../images/background.svg) no-repeat;
+  border-radius: 20px;
+  position: relative;
+  background-position: 50% 30%;
+}
+
+.digital-card::before {
+  content: '';
+  position: absolute;
+  top: -1.5%;
+  left: -2%;
+  height: 102.5%;
+  width: 104%;
+  background-image: linear-gradient(var(--rotate), #ff3d6e, #ffc323);
+  z-index: -1;
+  border-radius: 20px;
+  animation: spin 2s linear infinite;
+}
+
+.digital-card::after {
+  content: '';
+  position: absolute;
+  top: -1.5%;
+  left: -2%;
+  height: 102.5%;
+  width: 104%;
+  background: linear-gradient(var(--rotate), #ff3d6e, #ffc323);
+  z-index: -1;
+  border-radius: 20px;
+  filter: blur(20px);
+  animation: spin 2s linear infinite;
+}
+
+.container {
+  max-width: 200px;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--gray-200);
+  font-size: 14px;
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+  top: 103px;
+}
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.info {
+  margin-top: 8.125rem;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray-400);
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-weight: 400;
+  margin: 2rem 2rem;
+}
+
+ul {
+  margin-top: 2rem;
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+
+  100% {
+    --rotate: 360deg;
+  }
+}
